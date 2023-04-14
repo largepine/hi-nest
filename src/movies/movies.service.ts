@@ -6,7 +6,6 @@ export class MoviesService {
   private movies: Movie[] = [];
 
   getAll(): Movie[] {
-    // 실제 DB가 존재한다면 query가 올 자리
     return this.movies;
   }
 
