@@ -16,7 +16,10 @@ describe('MoviesService', () => {
     expect(service).toBeDefined();
   });
 
-  it('should be 5', () => {
-    expect(2 + 3).toEqual(5);
+  describe('getAll', () => {
+    it('should be an array', () => {
+      const result = service.getAll();
+      expect(result).toBeInstanceOf(Array);
+    });
   });
 });
