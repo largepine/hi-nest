@@ -22,4 +22,17 @@ describe('MoviesService', () => {
       expect(result).toBeInstanceOf(Array);
     });
   });
+
+  describe('getOne', () => {
+    it('should return a movie', () => {
+      service.create({
+        title: 'Test',
+        genres: ['test'],
+        year: 2000,
+      });
+      const movie = service.getOne(1);
+      expect(movie).toBeDefined();
+      expect(movie.id).toEqual(1);
+    });
+  });
 });
